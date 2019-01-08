@@ -1,0 +1,50 @@
+﻿# js原型与原型链的思考
+
+标签（空格分隔）： javascript
+
+---
+
+## 一、什么是原型、什么是原型链
+从哪来的、原型链也可以称为家族链、最终的对象为object 
+## 二、构造函数的过程
+var set = new Set();
+过程分为四部
+var object = {};
+object._proto_ = Set.prototype;
+Set.call(object);（对call()api不熟悉）
+return object;
+第二步是为了保证新建的对象与其原型保持一个同一个原型几继承对象
+第三步则是将新建的对象与Set的作用域进行绑定
+
+call() apply() api 的意义
+
+### 1. 由第二步引出的call()改变this指向问题
+
+this的指向问题
+###	2. ![此处输入图片的描述][1]this指向问题
+语言定义中大概分为几块
+（1）	函数中的this指向全局
+（2）	对象中的this指向对象本身
+（3）	凡事无绝对，this的指向是根据运行环境决定的（本质还是遵循上面两条）
+（4）	在闭包中因为将函数暴露在全局变量中，所以this的指向为全局变量
+闭包
+（1）	闭包是函数，作用是将获取函数内部的数据
+（2）	将获取到的数据一直保存在内存中
+闭包中的疑惑点
+
+匿名函数
+匿名函数：没有名字的函数，调用的方法通常在后面将其用（）包裹，让他立即执行，类似的操作为，jquery的立即执行。
+自执行函数的使用：定义匿名函数。并通过括号立即执行。
+函数的命名方式（声明与函数表达式）
+js解析器会先解析函数声明，后解析函数表达式。因此函数表达式前面不能使用该函数
+setter
+
+
+原型与原型链
+每创建一个新的实例对象，其实是将对象的对象原型的传递与实例对象的原型关联起来，换句话说这是委托不是复制。
+用到的属性为：prototype、_proto_、constructor。
+结合js构造函数可得
+https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png
+
+
+  [1]: https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png
