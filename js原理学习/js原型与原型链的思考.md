@@ -27,10 +27,11 @@ call() apply() api 的意义
 
 ### 1. 由第二步引出的call()改变this指向问题
 
-this的指向问题
-###	2. ![此处输入图片的描述][1]this指向问题
+#### this的指向问题
+
 
 语言定义中大概分为几块
+
 （1）	函数中的this指向全局
 
 （2）	对象中的this指向对象本身
@@ -60,13 +61,11 @@ setter
 
 
 原型与原型链
+
 每创建一个新的实例对象，其实是将对象的对象原型的传递与实例对象的原型关联起来，换句话说这是委托不是复制。
 
 用到的属性为：prototype、_proto_、constructor。
 
 结合js构造函数可得
 
-https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png
-
-
-  [1]: https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png
+[](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png)
