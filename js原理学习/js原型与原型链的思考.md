@@ -68,4 +68,4 @@ setter
 
 结合js构造函数可得
 
-[](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png)
+![js原型链](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png)
