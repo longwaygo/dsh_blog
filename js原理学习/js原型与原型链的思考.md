@@ -14,8 +14,8 @@
 
 过程分为四部
 
-    var object = {};
-    object._proto_ = Set.prototype;
+    var obj = {};
+    obj._proto_ = Set.prototype;
     Set.call(object);（对call()api不熟悉）
     return object;
 
