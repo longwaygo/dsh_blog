@@ -16,8 +16,8 @@
 
     var obj = {};
     obj._proto_ = Set.prototype;
-    Set.call(object);（对call()api不熟悉）
-    return object;
+    Set.call(obj);（对call()api不熟悉）
+    return Set;
 
 第二步是为了保证新建的对象与其原型保持一个同一个原型几继承对象
 
